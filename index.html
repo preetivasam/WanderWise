@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WanderWise | Discover. Plan. Wander.</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Boxicons -->
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Scroll Reveal -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#home" class="logo">
+
+        <i class='bx bx-compass'></i>
+
+        Wander<span>Wise</span>
+
+    </a>
+
+
+    <nav class="navbar" id="navbar">
+
+        <a href="#home">Home</a>
+
+        <a href="#destinations">Destinations</a>
+
+        <a href="#plan">Plan Trip</a>
+
+        <a href="#tips">Trip Tips</a>
+
+        <a href="#about">About</a>
+
+        <a href="#reviews">Reviews</a>
+
+
+        <div class="mobile-auth">
+
+            <button
+                class="nav-btn outline"
+                onclick="openModal('signin')"
+            >
+                Sign In
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="openModal('signup')"
+            >
+                Sign Up
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="nav-btn outline"
+            onclick="openModal('signin')"
+        >
+            Sign In
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="openModal('signup')"
+        >
+            Sign Up
+        </button>
+
+        <i
+            class='bx bx-menu menu-icon'
+            id="menu-icon"
+        ></i>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <p class="hero-tag">
+
+            <i class='bx bx-map'></i>
+
+            YOUR NEXT ADVENTURE STARTS HERE
+
+        </p>
+
+
+        <h1>
+
+            Travel More.<br>
+
+            <span>Wander Wise.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Discover beautiful destinations, plan smarter trips,
+            and create unforgettable memories — all in one place.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#destinations"
+                class="primary-btn"
+            >
+
+                Explore Destinations
+
+                <i class='bx bx-right-arrow-alt'></i>
+
+            </a>
+
+
+            <a
+                href="#plan"
+                class="secondary-btn"
+            >
+
+                Plan My Trip
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <div class="search-box">
+
+            <i class='bx bx-search'></i>
+
+            <input
+                type="text"
+                id="destinationSearch"
+                placeholder="Where do you want to go?"
+            >
+
+            <button onclick="searchDestination()">
+
+                Search
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= POPULAR DESTINATIONS ================= -->
+
+<section
+    class="section destinations-section"
+    id="destinations"
+>
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            EXPLORE
+        </p>
+
+        <h2>
+            Popular Destinations
+        </h2>
+
+        <p>
+            Start your journey with some of India's most loved destinations.
+        </p>
+
+    </div>
+
+
+   <div class="destination-grid" id="destinationGrid">
+
+    <!-- KASHMIR -->
+
+    <div class="destination-card" id="kashmir">
+
+        <div class="destination-image">
+
+            <img
+                src="img/kashmir.jpeg"
+                alt="Kashmir"
+            >
+
+            <span class="destination-badge">
+                Mountains
+            </span>
+
+        </div>
+
+        <div class="destination-info">
+
+            <h3>Kashmir</h3>
+
+            <div class="destination-state">
+                Jammu & Kashmir
+            </div>
+
+            <p>
+                Snow-covered mountains, peaceful lakes
+                and beautiful valleys.
+            </p>
+
+            <div class="famous-for">
+
+                <strong>
+                    Why it's famous
+                </strong>
+
+                <span>
+                    Dal Lake, mountains, valleys and
+                    breathtaking landscapes.
+                </span>
+
+            </div>
+
+            <div class="destination-bottom">
+
+                <span class="destination-location">
+
+                    <i class='bx bx-map'></i>
+
+                    Jammu & Kashmir
+
+                </span>
+
+                <a
+                    href="#plan"
+                    class="explore-link"
+                >
+
+                    Plan Trip
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OOTY -->
+
+    <div class="destination-card" id="ooty">
+
+        <div class="destination-image">
+
+            <img
+                src="img/ooty.jpeg"
+                alt="Ooty"
+            >
+
+            <span class="destination-badge">
+                Hills
+            </span>
+
+        </div>
+
+        <div class="destination-info">
+
+            <h3>Ooty</h3>
+
+            <div class="destination-state">
+                Tamil Nadu
+            </div>
+
+            <p>
+                A peaceful hill station surrounded by
+                tea gardens and misty landscapes.
+            </p>
+
+            <div class="famous-for">
+
+                <strong>
+                    Why it's famous
+                </strong>
+
+                <span>
+                    Tea gardens, Nilgiri mountains,
+                    lakes and pleasant weather.
+                </span>
+
+            </div>
+
+            <div class="destination-bottom">
+
+                <span class="destination-location">
+
+                    <i class='bx bx-map'></i>
+
+                    Tamil Nadu
+
+                </span>
+
+                <a
+                    href="#plan"
+                    class="explore-link"
+                >
+
+                    Plan Trip
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAIPUR -->
+
+    <div class="destination-card" id="jaipur">
+
+        <div class="destination-image">
+
+            <img
+                src="img/jaipur.jpeg"
+                alt="Jaipur"
+            >
+
+            <span class="destination-badge">
+                Heritage
+            </span>
+
+        </div>
+
+        <div class="destination-info">
+
+            <h3>Jaipur</h3>
+
+            <div class="destination-state">
+                Rajasthan
+            </div>
+
+            <p>
+                The Pink City filled with magnificent
+                palaces, forts and colourful markets.
+            </p>
+
+            <div class="famous-for">
+
+                <strong>
+                    Why it's famous
+                </strong>
+
+                <span>
+                    Amber Fort, Hawa Mahal, royal
+                    architecture and culture.
+                </span>
+
+            </div>
+
+            <div class="destination-bottom">
+
+                <span class="destination-location">
+
+                    <i class='bx bx-map'></i>
+
+                    Rajasthan
+
+                </span>
+
+                <a
+                    href="#plan"
+                    class="explore-link"
+                >
+
+                    Plan Trip
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GOA -->
+
+    <div class="destination-card" id="goa">
+
+        <div class="destination-image">
+
+            <img
+                src="img/goa.jpeg"
+                alt="Goa"
+            >
+
+            <span class="destination-badge">
+                Beaches
+            </span>
+
+        </div>
+
+        <div class="destination-info">
+
+            <h3>Goa</h3>
+
+            <div class="destination-state">
+                Goa
+            </div>
+
+            <p>
+                A coastal destination famous for
+                beaches, sunsets and vibrant culture.
+            </p>
+
+            <div class="famous-for">
+
+                <strong>
+                    Why it's famous
+                </strong>
+
+                <span>
+                    Beaches, Portuguese heritage,
+                    nightlife and seafood.
+                </span>
+
+            </div>
+
+            <div class="destination-bottom">
+
+                <span class="destination-location">
+
+                    <i class='bx bx-map'></i>
+
+                    Goa
+
+                </span>
+
+                <a
+                    href="#plan"
+                    class="explore-link"
+                >
+
+                    Plan Trip
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <div class="center-btn">
+
+        <button
+            class="outline-btn"
+            onclick="showAllDestinations()"
+        >
+
+            View All Destinations
+
+            <i class='bx bx-right-arrow-alt'></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXPLORE INDIA ================= -->
+
+<section class="section regions-section">
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            EXPLORE INDIA
+        </p>
+
+        <h2>
+            Where Will You Wander?
+        </h2>
+
+        <p>
+            Choose a region and discover places worth adding to your bucket list.
+        </p>
+
+    </div>
+
+
+    <div class="region-grid">
+
+
+        <!-- NORTH -->
+
+        <div
+            class="region-card north"
+            onclick="filterRegion('North')"
+        >
+
+            <div class="region-overlay"></div>
+
+            <div class="region-content">
+
+                <span>01</span>
+
+                <h3>
+                    North India
+                </h3>
+
+                <p>
+                    Mountains, forts & royal heritage
+                </p>
+
+                <button>
+
+                    Explore
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SOUTH -->
+
+        <div
+            class="region-card south"
+            onclick="filterRegion('South')"
+        >
+
+            <div class="region-overlay"></div>
+
+            <div class="region-content">
+
+                <span>02</span>
+
+                <h3>
+                    South India
+                </h3>
+
+                <p>
+                    Beaches, hills & ancient temples
+                </p>
+
+                <button>
+
+                    Explore
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EAST -->
+
+        <div
+            class="region-card east"
+            onclick="filterRegion('East')"
+        >
+
+            <div class="region-overlay"></div>
+
+            <div class="region-content">
+
+                <span>03</span>
+
+                <h3>
+                    East India
+                </h3>
+
+                <p>
+                    Culture, nature & hidden gems
+                </p>
+
+                <button>
+
+                    Explore
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WEST -->
+
+        <div
+            class="region-card west"
+            onclick="filterRegion('West')"
+        >
+
+            <div class="region-overlay"></div>
+
+            <div class="region-content">
+
+                <span>04</span>
+
+                <h3>
+                    West India
+                </h3>
+
+                <p>
+                    Deserts, beaches & vibrant cities
+                </p>
+
+                <button>
+
+                    Explore
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- REGION DESTINATIONS -->
+
+    <div
+        class="region-results"
+        id="regionResults"
+    >
+
+        <div class="region-results-heading">
+
+            <div>
+
+                <p class="section-tag">
+                    DISCOVER
+                </p>
+
+                <h3 id="regionTitle">
+                    North India
+                </h3>
+
+                <p id="regionDescription">
+                    Explore some of the most beautiful destinations in the region.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="destination-grid region-destination-grid"
+            id="regionDestinationGrid"
+        >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PLAN TRIP ================= -->
+
+<section
+    class="section planner-section"
+    id="plan"
+>
+
+    <div class="planner-container">
+
+
+        <div class="planner-content">
+
+            <p class="section-tag">
+                PLAN SMARTER
+            </p>
+
+            <h2>
+                Your Trip.<br>
+                Your Way.
+            </h2>
+
+            <p>
+                Tell us where you want to go, how many days you have,
+                and your budget. We'll help you create a simple travel plan.
+            </p>
+
+
+            <div class="planner-features">
+
+                <div>
+
+                    <i class='bx bx-check'></i>
+
+                    Personalized itinerary
+
+                </div>
+
+
+                <div>
+
+                    <i class='bx bx-check'></i>
+
+                    Budget-friendly suggestions
+
+                </div>
+
+
+                <div>
+
+                    <i class='bx bx-check'></i>
+
+                    Places worth visiting
+
+                </div>
+
+
+                <div>
+
+                    <i class='bx bx-check'></i>
+
+                    Travel tips included
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="planner-card">
+
+            <div class="planner-card-heading">
+
+                <div>
+
+                    <p>
+                        START PLANNING
+                    </p>
+
+                    <h3>
+                        Create Your Trip
+                    </h3>
+
+                </div>
+
+                <i class='bx bx-map-alt'></i>
+
+            </div>
+
+
+            <form id="plannerForm">
+
+
+                <div class="input-group">
+
+                    <label>
+                        Destination
+                    </label>
+
+                    <select id="destination">
+
+                        <option value="">
+                            Select destination
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>
+                            Days
+                        </label>
+
+                        <select id="days">
+
+                            <option value="2">
+                                2 Days
+                            </option>
+
+                            <option value="3">
+                                3 Days
+                            </option>
+
+                            <option value="4">
+                                4 Days
+                            </option>
+
+                            <option value="5">
+                                5 Days
+                            </option>
+
+                            <option value="7">
+                                7 Days
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Budget
+                        </label>
+
+                        <select id="budget">
+
+                            <option value="5000">
+                                ₹5,000
+                            </option>
+
+                            <option value="10000">
+                                ₹10,000
+                            </option>
+
+                            <option value="15000">
+                                ₹15,000
+                            </option>
+
+                            <option value="25000">
+                                ₹25,000
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-btn"
+                >
+
+                    Create My Plan
+
+                    <i class='bx bx-right-arrow-alt'></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ITINERARY -->
+
+    <div
+        class="itinerary-wrapper"
+        id="itineraryWrapper"
+    >
+
+        <div class="itinerary-card">
+
+            <div class="itinerary-header">
+
+                <div>
+
+                    <p class="section-tag">
+                        YOUR PLAN
+                    </p>
+
+                    <h3 id="planTitle">
+                        Your itinerary
+                    </h3>
+
+                </div>
+
+
+                <button
+                    onclick="saveTrip()"
+                    class="save-btn"
+                >
+
+                    <i class='bx bx-bookmark'></i>
+
+                    Save Trip
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="itinerary-details"
+                id="itineraryDetails"
+            >
+
+            </div>
+
+
+            <button
+                class="outline-btn"
+                onclick="modifyPlan()"
+            >
+
+                Modify Plan
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TRAVEL TIPS ================= -->
+
+<section
+    class="section tips-section"
+    id="tips"
+>
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            TRAVEL SMART
+        </p>
+
+        <h2>
+            Tips Before You Go
+        </h2>
+
+        <p>
+            Small things that can make your journey much easier.
+        </p>
+
+    </div>
+
+
+    <div
+        class="tips-grid"
+        id="tipsGrid"
+    >
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="section about-section"
+    id="about"
+>
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img
+                src="img/about.jpeg"
+                alt="Travel"
+            >
+
+            <div class="about-badge">
+
+                <strong>
+                    20+
+                </strong>
+
+                <span>
+                    Places to<br>
+                    Explore
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-tag">
+                ABOUT WANDERWISE
+            </p>
+
+            <h2>
+                Travel Curious.<br>
+                Travel Wise.
+            </h2>
+
+            <p>
+                WanderWise was created for travelers who want to
+                explore more without the stress of figuring
+                everything out themselves.
+            </p>
+
+            <p>
+                From discovering destinations to planning your
+                itinerary and preparing for your journey,
+                WanderWise keeps everything simple.
+            </p>
+
+
+            <div class="about-stats">
+
+                <div>
+
+                    <strong>
+                        20+
+                    </strong>
+
+                    <span>
+                        Destinations
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <span>
+                        Regions
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        1
+                    </strong>
+
+                    <span>
+                        Smart Planner
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section
+    class="section reviews-section"
+    id="reviews"
+>
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            TRAVEL STORIES
+        </p>
+
+        <h2>
+            What Travelers Say
+        </h2>
+
+        <p>
+            Experiences shared by fellow wanderers.
+        </p>
+
+    </div>
+
+
+    <div
+        class="reviews-grid"
+        id="reviewsGrid"
+    >
+
+    </div>
+
+
+    <div class="center-btn">
+
+        <button
+            class="outline-btn"
+            onclick="openReviewModal()"
+        >
+
+            Share Your Experience
+
+            <i class='bx bx-message-rounded-add'></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                <i class='bx bx-compass'></i>
+
+                Wander<span>Wise</span>
+
+            </a>
+
+
+            <p>
+
+                Discover more. Plan smarter.<br>
+                Wander wiser.
+
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+
+                <a href="#">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+
+                <a href="#">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+
+                <a href="#">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="#destinations">
+                Destinations
+            </a>
+
+            <a href="#plan">
+                Plan Trip
+            </a>
+
+            <a href="#tips">
+                Travel Tips
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                WanderWise
+            </h4>
+
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Regions
+            </h4>
+
+            <a href="#destinations">
+                North India
+            </a>
+
+            <a href="#destinations">
+                South India
+            </a>
+
+            <a href="#destinations">
+                East India
+            </a>
+
+            <a href="#destinations">
+                West India
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 WanderWise. Made for curious travelers.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= AUTH MODAL ================= -->
+
+<div
+    class="modal"
+    id="authModal"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeModal()"
+        >
+
+            <i class='bx bx-x'></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class='bx bx-compass'></i>
+
+        </div>
+
+
+        <h2 id="modalTitle">
+            Welcome to WanderWise
+        </h2>
+
+
+        <p id="modalText">
+            Sign in to continue your journey.
+        </p>
+
+
+        <form onsubmit="handleAuth(event)">
+
+            <div class="input-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button class="primary-btn full-btn">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= REVIEW MODAL ================= -->
+
+<div
+    class="modal"
+    id="reviewModal"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeReviewModal()"
+        >
+
+            <i class='bx bx-x'></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class='bx bx-star'></i>
+
+        </div>
+
+
+        <h2>
+            Share Your Experience
+        </h2>
+
+
+        <p>
+            Tell other travelers about your journey.
+        </p>
+
+
+        <form onsubmit="submitReview(event)">
+
+            <div class="input-group">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="reviewName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Your Review
+                </label>
+
+                <textarea
+                    id="reviewText"
+                    placeholder="Tell us about your trip..."
+                    rows="4"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button class="primary-btn full-btn">
+                Submit Review
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <i class='bx bx-check-circle'></i>
+
+    <span id="toastMessage">
+        Done!
+    </span>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
